@@ -2,7 +2,10 @@
 {% block contenido %}
 <h2>Anuncios</h2>
 
-<a href="{% url 'post:crear-anuncio' %}">Crear Anuncio</a>
+{% if user.is_authenticated %}
+<a href="{% url 'post:crear-anuncio' %}">Crear Anuncio</a> 
+{% endif %}
+
 <a href="{% url 'post:lista-anuncios' %}">Ver Anuncios</a>
 <a href="{% url 'index:index' %}">Volver al Menu Principal</a>
       

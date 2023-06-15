@@ -4,7 +4,9 @@
     {% for anuncio in lista_anuncios %}
     <ul>
         <li>  {{ anuncio.titulo }} - {{ anuncio.juego }} - {{ anuncio.fecha_de_publicacion }} </li>
+        {% if user.is_authenticated %}
         <a href="{% url 'post:detalle-anuncio' anuncio.id %}">Ver más</a>
+        {% endif %}
     </ul>
         
     {% endfor %}

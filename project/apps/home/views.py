@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.views import LoginView, LogoutView
+from . import forms
 
 
 
@@ -25,13 +26,13 @@ def login_request(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = forms.CustomUserCreationForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")
             form.save()
             return render(request, "home/index.html")
     else:
-        form = UserCreationForm()
+        form = forms.CustomUserCreationForm()
     return render(request, "home/register.html", {"form" : form})            
 
 
