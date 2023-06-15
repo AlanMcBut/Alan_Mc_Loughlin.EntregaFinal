@@ -7,7 +7,7 @@ class Post(models.Model):
     rango = models.CharField(max_length=15, null=True)
     cuenta_del_juego = models.CharField(max_length=50, blank=False, default='Ingrese su usuario del juego')
     contenido = models.TextField(max_length=200, default='Detalles sobre su peticion')
-    fecha_de_publicacion = models.DateTimeField(default=datetime.now)
+    fecha_de_publicacion = (models.DateTimeField(auto_now_add=True))
 
     def __str__(self):
         return self.titulo
