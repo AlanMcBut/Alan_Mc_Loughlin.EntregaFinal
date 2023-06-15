@@ -3,8 +3,8 @@
 
     {% for anuncio in lista_anuncios %}
     <ul>
-        <li>  {{ anuncio.titulo }}, {{ anuncio.juego }}, {{ anuncio.contenido }}, {{ anuncio.fecha_de_publicacion }} </li>
-
+        <li>  {{ anuncio.titulo }} - {{ anuncio.juego }} - {{ anuncio.fecha_de_publicacion }} </li>
+        <a href="{% url 'post:detalle-anuncio' anuncio.id %}">Ver más</a>
     </ul>
         
     {% endfor %}

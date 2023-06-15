@@ -1,0 +1,19 @@
+{% extends 'post/index.html' %}
+
+<h1>Detalle del anuncio</h1>
+
+{% block contenido %}
+    <ul>
+      
+        <li>  <strong>Peticion</strong> <p>{{ object.titulo }}</p> </li>
+        <li>  <strong>Juego</strong> <p>{{ object.juego }}</p> </li>
+        <li>  <strong>Rango</strong> <p>{{ object.rango }}</p> </li>
+        <li>  <strong>Cuenta</strong> <p>{{ object.cuenta_del_juego }}</p> </li>
+        <li>  <strong>Descripcion</strong> <p>{{ object.contenido }}</p> </li>
+        <li>  <strong>Fecha de Publicacion</strong> <p>{{ object.fecha_de_publicacion }}</p> </li>
+       
+
+    </ul>
+    
+    <a href="{% url 'post:lista-anuncios' %}">Atras</a>
+{% endblock contenido %}

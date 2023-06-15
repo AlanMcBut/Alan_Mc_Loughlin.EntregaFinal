@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('crear-anuncio/', views.AnuncioCrear.as_view(), name='crear-anuncio'),
     path('lista-anuncios/', views.AnuncioLista.as_view(), name='lista-anuncios'),
+    path('detalle-anuncio/<int:pk>/', views.AnuncioDetalle.as_view(), name='detalle-anuncio'),
 ]

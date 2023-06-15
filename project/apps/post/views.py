@@ -3,6 +3,7 @@ from . import forms
 from . import models
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.detail import DetailView
 from django.urls import reverse_lazy
 
 def index(request):
@@ -19,8 +20,11 @@ class AnuncioLista(ListView):
     template_name = "post/lista-anuncios.html"
     context_object_name = "lista_anuncios"
 
-class AnuncioBorrar(DeleteView):
-    model = models.Post    
+class AnuncioDetalle(DetailView):
+    model = models.Post  
+    template_name = "post/detalle-anuncio.html"  
+
+
 
 
 
