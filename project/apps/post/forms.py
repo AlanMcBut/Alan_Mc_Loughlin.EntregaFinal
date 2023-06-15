@@ -6,6 +6,7 @@ class PostForm(forms.ModelForm):
         model = models.Post
         fields = '__all__'
 
+
 class NombreJuegoForm(forms.ModelForm):
     class Meta:
         model = models.NombreJuego

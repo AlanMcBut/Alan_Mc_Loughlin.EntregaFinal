@@ -1,0 +1,13 @@
+{% block contenido %}
+    <h1>Anuncios creados</h1>
+
+    {% for anuncio in lista_anuncios %}
+    <ul>
+        <li>  {{ anuncio.titulo }}, {{ anuncio.juego }}, {{ anuncio.contenido }}  </li>
+
+    </ul>
+        
+    {% endfor %}
+
+    <a href="{% url 'post:index' %}">Volver al Menu</a>
+{% endblock contenido %}

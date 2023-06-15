@@ -1,5 +1,5 @@
 
-{% block content_creation %}
+{% block contenido %}
     <h1>Creando Anuncio</h1>
 
     <form method="post">
@@ -8,5 +8,7 @@
         <button type="submit">Crear Anuncio</button> 
     </form>
 
-{% endblock content_creation %}
+    <a href="{% url 'post:index' %}">Cancelar y volver</a>
+
+{% endblock contenido %}
 
