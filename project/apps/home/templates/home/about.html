@@ -1,0 +1,8 @@
+{% extends 'home/index.html' %}
+
+{% block contenido %}
+<h2>{{ mensaje }} </h2>
+
+<a href="{% url 'index:index' %}">Volver</a>
+
+{% endblock contenido %}
