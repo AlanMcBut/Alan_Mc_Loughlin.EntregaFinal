@@ -1,0 +1,12 @@
+
+{% block content_creation %}
+    <h1>Creando Anuncio</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear Anuncio</button> 
+    </form>
+
+{% endblock content_creation %}
+
