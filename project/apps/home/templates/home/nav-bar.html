@@ -2,7 +2,7 @@
     <p>Hola {{ user.username }} ! - <a href="{% url 'index:logout' %}">Cerrar Sesion</a></p>
 {% else %}    
 
-   <a href="{% url 'index:login' %}">Iniciar Sesion</a>
+   <a href="{% url 'index:login' %}">Iniciar Sesion</a> <a href="{% url 'index:register' %}">Registrarse</a>
 
 
 {% endif %}
