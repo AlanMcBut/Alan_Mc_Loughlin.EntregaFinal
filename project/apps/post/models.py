@@ -13,7 +13,7 @@ class Post(models.Model):
         return self.titulo
     
 class NombreJuego(models.Model):
-    nombre = models.CharField(max_length=20, unique=True, verbose_name='Juegos')
+    nombre = models.CharField(max_length=50, unique=True, verbose_name='Juegos')
 
     def __str__(self):
         return self.nombre
