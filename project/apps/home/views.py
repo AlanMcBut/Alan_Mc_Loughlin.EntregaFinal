@@ -35,6 +35,13 @@ def register(request):
         form = forms.CustomUserCreationForm()
     return render(request, "home/register.html", {"form" : form})
 
+
+class logout_request(LogoutView):
+    template_name = "home/logout.html"
+    success_url = "home/login.html"
+
+
+
 def about(request):
     mensaje = "Mi nombre es Alan Mc Loughlin, tengo 23 años y soy de Argentina. Soy estudiante de desarrollo de videojuegos, y decidi inscribirme al curso de Python de Coderhouse para aprender fundamentos basicos de programacion.Debido a eso, realice esta pagina como proyecto final para unir las 2 cosas."
     return render(request, "home/about.html", {"mensaje" : mensaje})        
