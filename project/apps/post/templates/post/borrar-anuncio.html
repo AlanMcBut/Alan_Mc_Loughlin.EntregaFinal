@@ -1,0 +1,16 @@
+{% extends 'post/index.html' %}
+
+{% block contenido %}
+    <h1>Eliminando Anuncio</h1>
+
+    <p>Confirmas eliminar {{ anuncio }}?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Eliminar</button>
+    </form>
+
+<a href="{% url 'post:lista-anuncios' %}">Cancelar y volver</a>
+
+{% endblock contenido %}

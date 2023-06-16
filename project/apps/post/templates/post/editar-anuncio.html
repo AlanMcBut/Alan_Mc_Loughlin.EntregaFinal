@@ -1,0 +1,14 @@
+{% extends 'post/index.html' %}
+
+{% block contenido %}
+    <h1>Editando Anuncio</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Comfirmar edicion</button> 
+    </form>
+
+    <a href="{% url 'post:index' %}">Cancelar y volver</a>
+
+{% endblock contenido %}

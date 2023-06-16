@@ -25,6 +25,18 @@ class AnuncioDetalle(LoginRequiredMixin, DetailView):
     model = models.Post  
     template_name = "post/detalle-anuncio.html"  
 
+class AnuncioBorrar(DeleteView):
+    model = models.Post
+    template_name = "post/borrar-anuncio.html"
+    success_url = reverse_lazy("post:lista-anuncios")    
+
+class AnuncioEditar(UpdateView):
+    model = models.Post
+    form_class = forms.PostForm
+    template_name = "post/editar-anuncio.html"    
+    success_url = reverse_lazy("post:lista-anuncios")
+
+
 
 
 
